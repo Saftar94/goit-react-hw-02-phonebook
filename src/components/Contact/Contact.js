@@ -1,12 +1,16 @@
 import PropTypes from "prop-types";
+import styles from "./Contact.module.scss";
 
 const Contact = ({ name, number, id, deleteContact }) => {
   return (
     <li>
       <p>
-        {name}:{number}
+        <span className={styles.Name}>{name}:</span>
+        <span className={styles.Number}>{number}</span>
       </p>
-      <button onClick={() => deleteContact(id)}>Delete</button>
+      <button className={styles.Delete} onClick={() => deleteContact(id)}>
+        Delete
+      </button>
     </li>
   );
 };

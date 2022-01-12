@@ -25,6 +25,7 @@ class Addcontact extends Component {
         <label>
           <p>Name</p>
           <input
+            className={styles.Input}
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -37,6 +38,7 @@ class Addcontact extends Component {
         <label>
           <p>Number</p>
           <input
+            className={styles.Input}
             type="tel"
             name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -46,7 +48,9 @@ class Addcontact extends Component {
             onChange={this.inputName}
           />
         </label>
-        <button type="submit">Add contact</button>
+        <button className={styles.Button} type="submit">
+          Add contact
+        </button>
       </form>
     );
   }

@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import Contact from "./Contact";
-
+import styles from "./Contact.module.scss";
 const ConctactsList = ({ contacts, deleteContact }) => {
   return (
-    <ul>
+    <ul className={styles.Ulist}>
       {contacts.length > 0 &&
         contacts.map((item) => (
           <Contact
